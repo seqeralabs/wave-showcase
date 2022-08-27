@@ -1,0 +1,6 @@
+.nextflow*
+.idea
+*.log
+work
+results
+

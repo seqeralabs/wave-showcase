@@ -1,0 +1,37 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: wave-demo
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  namespace: wave-demo
+  name: wave-sa
+  annotations:
+    eks.amazonaws.com/role-arn: "arn:aws:iam::011206878118:role/wave-demo-role" 
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: wave-demo
+  name: wave-role
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "pods/status", "pods/log", "pods/exec"]
+    verbs: ["get", "list", "watch", "create", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  namespace: wave-demo
+  name: wave-rolebind
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: wave-role
+subjects:
+  - kind: ServiceAccount
+    name: wave-sa
+...
