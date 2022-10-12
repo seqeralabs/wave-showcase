@@ -28,9 +28,7 @@ This example runs the pipeline on your local computer (local executor). However
 the pipeline uses an AWS bucket as a work directory:
 
 ```
-nextflow run rnaseq-nf \
-	 -with-wave \
-         -w 's3://nextflow-ci/test'
+nextflow run rnaseq-nf -with-wave
 ```
 
 ### Run it on AWS Batch
@@ -40,8 +38,5 @@ This example is essentially the same, except that we  reference the batch pipeli
 The batch profile definition in this case would contain the required AWS Batch and storage credentials:
 
 ```
-nextflow run rnaseq-nf \
-    -profile batch \
-    -with-wave \
-    -w 's3://nextflow-ci/test'
+nextflow run rnaseq-nf -with-wave -profile batch
 ```

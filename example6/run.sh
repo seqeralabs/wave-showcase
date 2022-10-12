@@ -1,5 +1,2 @@
-nextflow run rnaseq-nf \
-    -w 's3://nextflow-ci/test'  \
-    -with-wave \
-        
+nextflow run rnaseq-nf -with-wave
 
