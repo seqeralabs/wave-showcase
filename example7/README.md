@@ -31,7 +31,10 @@ fusion {
 ```
 nextflow run nf-core/rnaseq \
 	-profile conda,test \
-        --outdir s3://nextflow-ci/fusion-results \
-        -w s3://nextflow-ci/test \
-	-bg > pipeline.log & 
+        -work-dir s3://<YOUR BUCKET>/work \
+        --outdir s3://<YOUR BUCKET>/results
 ```
+
+Note: Make sure to specifity an AWS S3 bucket to which you have read-write access as work directory. 
+
+AWS credentials to access the bucket should be avaiable either via Environment variables, Amazon ECS container credentials or Instance profile credentials. 

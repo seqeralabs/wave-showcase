@@ -122,17 +122,22 @@ process {
    executor = 'k8s'
 }
 
-workDir = 's3://wave-store/work'
-
 k8s {
-    context = 'arn:aws:eks:eu-west-2:<YOUR ACCOUNT ID>:cluster/tower-stage'
+    context = '<YOUR K8S CLUSTER CONTEXT>'
     namespace = 'wave-demo'
     serviceAccount = 'wave-sa'
 }
 ```
 
+Note: in the configuration replace the context, namespace and serviceAccount  
+with the names matching your cluster configuation. 
+
 ### Run it 
 
 ```
-nextflow run rnaseq-nf 
+nextflow run rnaseq-nf -work-dir 's3://<YOUR BUCKET>/work'
 ```
+
+Make sure to specifity an AWS S3 bucket to which you have read-write access as work directory. 
+
+AWS credentials to access the bucket should be avaiable either via Environment variables, Amazon ECS container credentials or Instance profile credentials.

@@ -28,8 +28,15 @@ This example runs the pipeline on your local computer (local executor). However
 the pipeline uses an AWS bucket as a work directory:
 
 ```
-nextflow run rnaseq-nf -with-wave
+nextflow run rnaseq-nf \
+  -with-wave \
+  -work-dir s3://<YOUR-BUCKET>/work
 ```
+
+Make sure to specifity an AWS S3 bucket to which you have read-write access as work directory. 
+
+AWS credentials to access the bucket should be avaiable either via Environment variables, Amazon ECS container credentials or Instance profile credentials. 
+
 
 ### Run it on AWS Batch
 
@@ -38,5 +45,8 @@ This example is essentially the same, except that we  reference the batch pipeli
 The batch profile definition in this case would contain the required AWS Batch and storage credentials:
 
 ```
-nextflow run rnaseq-nf -with-wave -profile batch
+nextflow run rnaseq-nf \
+  -with-wave \
+  -profile batch \
+  -work-dir s3://<YOUR-BUCKET>/work
 ```
