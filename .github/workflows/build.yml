@@ -1,0 +1,54 @@
+name: Wave CI
+on:
+  push:
+    branches:
+      - 'master'
+  schedule:
+    - cron:  '0 * * * *'
+
+jobs:
+  build:
+    name: Wave showcase example
+    if: "github.event == 'push' || github.repository != github.event.pull_request.head.repo.full_name"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Environment
+        run: env | sort
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          submodules: true
+
+      - name: Setup Java ${{ matrix.java_version }}
+        uses: actions/setup-java@v2
+        with:
+          java-version: 11
+          distribution: 'adopt'
+          architecture: x64
+
+      - name: Install
+        run: |
+          curl -fsSL get.nextflow.io | bash
+          sudo mv nextflow /usr/local/bin 
+
+      - name: Tests
+        run: |          
+          (cd example1; bash run.sh)
+          (cd example2; bash run.sh)
+          (cd example6; bash run.sh)
+        env:
+          TOWER_ACCESS_TOKEN: ${{ secrets.TOWER_ACCESS_TOKEN }}
+          AWS_ACCESS_KEY_ID: ${{secrets.TOWER_CI_AWS_ACCESS}}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.TOWER_CI_AWS_SECRET}}
+
+      - name: Publish tests results
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: |
+            **/.nextflow*
