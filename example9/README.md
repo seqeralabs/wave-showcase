@@ -23,7 +23,7 @@ docker {
 }
 ```
 
-Make sure youe replace the above `workDir` with an AWS S3 bucket you have access to. Note: the `docker` section is not needed when running with AWS Batch.
+Make sure you replace the value in `workDir` above with an AWS S3 bucket that you have access to. Note: the `docker` section is not needed when running with AWS Batch.
 
 ### Run it 
 
@@ -39,6 +39,6 @@ Once execution completes, either successfully or with a failure, any task’s ex
 nextflow plugin nf-wave:debug-task <task hash or name or workdir>
 ```
 
-In the above on-line command, use the unique task hash id generated during your pipeline’s execution. e.g. `d8/d067e8`. 
+For the task hash in the command above, use the unique task hash id generated during your pipeline’s execution. e.g. `d8/d067e8`. 
 
 Note: currently, task debugging is only possible up until the expiry of the temporary token associated with the container’s execution — that is, 12 hours from the task's creation.
