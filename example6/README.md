@@ -1,8 +1,8 @@
-# Run a pipeline with S3 using Wave and Fusionfs
+# Run a pipeline with S3 using Wave and Fusion file system
 
 ### Summary 
 
-This example shows how to use Wave to automatically provision the Fusionfs file system allowing  running pipeline tasks to natively access AWS S3 as a work directory.
+This example shows how to use Wave to automatically provision the [Fusion file system](https://www.nextflow.io/docs/latest/fusion.html) allowing  running pipeline tasks to natively access AWS S3 as a work directory.
 
 
 ### Config file 

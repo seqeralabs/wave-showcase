@@ -1,8 +1,8 @@
-# Run nf-core/rnaseq using Conda-based containers and Fusionfs 
+# Run nf-core/rnaseq using Conda-based containers and Fusion file system
 
 ### Summary 
 
-This example shows how to run the nf-core/rnaseq pipeline using AWS S3 as a Fusionfs mounted work directory and use Wave containers built on-demand using the `conda` directive defined in the pipeline. 
+This example shows how to run the nf-core/rnaseq pipeline using AWS S3 as a [Fusion](https://www.nextflow.io/docs/latest/fusion.html) mounted work directory and use Wave containers built on-demand using the `conda` directive defined in the pipeline. 
 
 
 ### Config 

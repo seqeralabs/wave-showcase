@@ -1,10 +1,10 @@
 # Interactive debugging of remotely executed tasks
 
-Pipeline tasks executed with Wave and Fusionfs features enabled can be debugged interactively regardless of whether that are  executed on the local computer or remotely.
+Pipeline tasks executed with Wave and [Fusion file system](https://www.nextflow.io/docs/latest/fusion.html) features enabled can be debugged interactively regardless of whether that are  executed on the local computer or remotely.
 
 ### Config 
 
-This feature requires Wave and Fusionfs to both be enabled in your pipeline configuration.
+This feature requires Wave and Fusion file system to both be enabled in your pipeline configuration.
 
 ```
 workDir = 's3://some-bucket/work'
