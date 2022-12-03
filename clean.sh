@@ -1,5 +1,6 @@
 docker-rmi wave
 docker-rmi pditommaso
+docker-rmi quay
 docker-cleanup
 docker logout
 
