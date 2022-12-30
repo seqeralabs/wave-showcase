@@ -33,9 +33,9 @@ nextflow run rnaseq-nf \
   -work-dir s3://<YOUR-BUCKET>/work
 ```
 
-Make sure to specifity an AWS S3 bucket to which you have read-write access as work directory. 
+Make sure to specify an AWS S3 bucket to which you have read-write access as work directory. 
 
-AWS credentials to access the bucket should be avaiable either via Environment variables, Amazon ECS container credentials or Instance profile credentials. 
+AWS credentials to access the bucket should be available either via Environment variables, Amazon ECS container credentials or Instance profile credentials. 
 
 
 ### Run it on AWS Batch

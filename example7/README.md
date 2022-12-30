@@ -35,6 +35,6 @@ nextflow run nf-core/rnaseq \
         --outdir s3://<YOUR BUCKET>/results
 ```
 
-Note: Make sure to specifity an AWS S3 bucket to which you have read-write access as work directory. 
+Note: Make sure to specify an AWS S3 bucket to which you have read-write access as work directory. 
 
-AWS credentials to access the bucket should be avaiable either via Environment variables, Amazon ECS container credentials or Instance profile credentials. 
+AWS credentials to access the bucket should be available either via Environment variables, Amazon ECS container credentials or Instance profile credentials. 
