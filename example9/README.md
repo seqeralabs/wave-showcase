@@ -1,4 +1,4 @@
-# Run a pipeline with S3 using Wave and Fusion file system
+# Run a pipeline with Google Storage using Wave and Fusion file system
 
 ### Summary 
 
