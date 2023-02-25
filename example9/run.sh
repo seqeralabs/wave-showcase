@@ -1,2 +1,1 @@
-nextflow run rnaseq-nf -with-wave
-
+nextflow run rnaseq-nf
