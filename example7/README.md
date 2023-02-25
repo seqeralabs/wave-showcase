@@ -2,7 +2,9 @@
 
 ### Summary 
 
-This example shows how to run the nf-core/rnaseq pipeline using AWS S3 as a [Fusion](https://www.nextflow.io/docs/latest/fusion.html) mounted work directory and use Wave containers built on-demand using the `conda` directive defined in the pipeline. 
+This example shows how to run the [nf-core/rnaseq](https://nf-co.re/rnaseq) pipeline with AWS Batch using 
+[Fusion](https://www.nextflow.io/docs/latest/fusion.html) to access the AWS S3 storage and the Wave service 
+to provision the pipeline containers on-demand, by using the Conda recipes defined in the pipeline configuration. 
 
 
 ### Config 

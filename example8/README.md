@@ -1,7 +1,9 @@
-# Run a pipeline on a remote Kubernetes cluster using Wave and Fusion
+# Run a pipeline on a remote Kubernetes cluster (EKS) using Wave and Fusion
+
+### Summary
 
 This example shows how to deploy a pipeline for execution on a remote 
-Kubernetes cluster using the [Fusion file system](https://www.nextflow.io/docs/latest/fusion.html) as pipelone work directory.
+AWS EKS cluster using the [Fusion file system](https://www.nextflow.io/docs/latest/fusion.html) as pipeline work directory.
 
 ### Kubernetes config 
 

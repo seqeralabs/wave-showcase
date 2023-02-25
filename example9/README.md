@@ -1,6 +1,6 @@
 # Run a pipeline with Google Storage using Wave and Fusion file system
 
-### Summary 
+### Summary
 
 This example shows how to use Wave to provision the [Fusion file system](https://www.nextflow.io/docs/latest/fusion.html) 
 in the pipeline containers and access Google Storage as a work directory.

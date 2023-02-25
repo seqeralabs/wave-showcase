@@ -2,7 +2,7 @@
 
 ### Summary 
 
-This example shows how to use the Conda packages defined a in 
+This example shows how to use the Conda packages defined in 
 Nextflow pipeline via the `conda` directive to assemble 
 the corresponding containers on-demand and provision for the 
 pipeline execution. 

@@ -1,6 +1,9 @@
 # Interactive debugging of remotely executed tasks
 
-Pipeline tasks executed with Wave and [Fusion file system](https://www.nextflow.io/docs/latest/fusion.html) features enabled can be debugged interactively regardless of whether that are  executed on the local computer or remotely.
+### Summary 
+
+This example shows how Wave and [Fusion file system](https://www.nextflow.io/docs/latest/fusion.html) can be used to debug 
+interactively pipeline tasks regardless of whether they were executed on the local computer or remotely.
 
 ### Config 
 
