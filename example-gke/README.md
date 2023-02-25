@@ -6,7 +6,7 @@ This example shows how to use Wave to provision the [Fusion file system](https:/
 
 ### Cluster preparation
 
-1. Create a GKE "standard" ("Autopilot" is not supported yet)
+1. Create a GKE "standard" cluster ("Autopilot" is not supported yet). See [Google documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-zonal-cluster) for details. 
 2. Make sure to use instance types with 2 or more CPUs and providing SSD instance storage (families: `n1`,`n2`,`c2`, `m1`, `m2`, `m3`)
 3. Make sure to enable the *Workload identity* feature when creating (or updating) the cluster. 
    - "Enable Workload Identity" in the cluster "Security" setting 
