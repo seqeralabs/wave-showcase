@@ -57,4 +57,3 @@ RUN apk update && apk add bash cowsay \
 ```bash
 nextflow run demo.nf -with-wave
 ```
- 

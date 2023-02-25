@@ -2,7 +2,9 @@
 
 ### Summary 
 
-This example shows how to use Wave to automatically provision the [Fusion file system](https://www.nextflow.io/docs/latest/fusion.html) allowing  running pipeline tasks to natively access AWS S3 as a work directory.
+This example shows how to use the Wave service to automatically provision 
+the [Fusion file system](https://www.nextflow.io/docs/latest/fusion.html) in your pipeline containers, 
+and run it with AWS Batch using AWS S3 as a work directory.
 
 
 ### Config file 

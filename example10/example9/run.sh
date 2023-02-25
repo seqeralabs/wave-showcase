@@ -1,1 +1,0 @@
-nextflow run rnaseq-nf

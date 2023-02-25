@@ -1,7 +1,7 @@
 ### Summary 
 
 This example shows how to access a private container repository 
-in your pipeline project. 
+in your Nextflow pipeline using the Wave service. 
 
 ### Pipeline script 
 
