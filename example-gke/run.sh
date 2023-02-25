@@ -1,0 +1,1 @@
+~/Projects/nextflow/launch.sh run rnaseq-nf

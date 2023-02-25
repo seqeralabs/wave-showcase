@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: wave-demo
+  name: wave-role
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "pods/status", "pods/log", "pods/exec"]
+    verbs: ["get", "list", "watch", "create", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  namespace: wave-demo
+  name: wave-rolebind
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: wave-role
+subjects:
+  - kind: ServiceAccount
+    name: wave-sa
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: wave-demo
+  name: wave-sa-token
+  annotations:
+    kubernetes.io/service-account.name: wave-sa
+type: kubernetes.io/service-account-token
+...

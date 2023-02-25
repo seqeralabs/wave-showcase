@@ -12,7 +12,8 @@ to run with the [Wave container provisioning](https://seqera.io/wave/) service.
 7. [Run nf-core/RNAseq using Conda-based containers and Fusion file system](example7/)
 8. [Run a pipeline on a remote Kubernetes cluster using Wave and Fusion file system](example8)
 9. [Run a pipeline with Google Batch using Fusion over Google Storage bucket](example-googlebatch)
-10. [Bonus: Interactive debugging of remotely executed tasks](example9)
+10. [Run a pipeline with Google Kubernetes Engine using Fusion over Google Storage bucket](example-gke)
+10. [Bonus: Interactive debugging of remotely executed tasks](example-bonus)
 
 For more details check out the [Wave user documentation](https://www.nextflow.io/docs/latest/wave.html).
 
