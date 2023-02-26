@@ -4,6 +4,8 @@
 
 This example shows how to use Wave to provision the [Fusion file system](https://www.nextflow.io/docs/latest/fusion.html) and run it in a Google Kubernetes Engine (GKE) cluster using a Google Storage bucket as pipeline work directory.
 
+NOTE: it requires Nextflow `23.02.1-edge` or later.
+
 ### Cluster preparation
 
 1. Create a GKE "standard" cluster ("Autopilot" is not supported yet). See [Google documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-zonal-cluster) for details. 
@@ -44,8 +46,6 @@ process {
    scratch = false
 }
 
-workDir = 'gs://<YOUR-BUCKET>/work'
-
 k8s {
     context = '<YOUR-GKE-CLUSTER-CONTEXT>'
     namespace = 'wave-demo'
@@ -58,9 +58,7 @@ k8s {
 
 ```
 nextflow run rnaseq-nf \
-  -with-wave \
   -work-dir gs://<YOUR-BUCKET>/work
 ```
 
 Make sure to specify a Google Storage bucket to which you have read-write access as work directory. 
-
