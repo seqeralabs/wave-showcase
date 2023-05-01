@@ -13,7 +13,7 @@ NOTE: it requires Nextflow `23.02.1-edge` or later.
 3. Make sure to enable the [Workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) feature when creating (or updating) the cluster. 
    - "Enable Workload Identity" in the cluster "Security" setting 
    - "Enable GKE Metadata Server" in the node group "Security" settings
-   - Configure the cluster following the See the [Google documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#kubectl) for details. documentation
+   - Configure the cluster following the See the [Google documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#kubectl) for details.
     - The following values were used in this example (replace them with values corresponding your environment):
       - CLUSTER_NAME: the GKE cluster name e.g. `cluster-2`
       - COMPUTE_REGION: the GKE cluster region e.g. `europe-west1`
@@ -23,7 +23,7 @@ NOTE: it requires Nextflow `23.02.1-edge` or later.
       - GSA_PROJECT: the Google project id e.g.  `my-nf-project-261815`
       - PROJECT_ID: the Google project id e.g. `my-nf-project-261815`
       - ROLE_NAME: the role to grant access permission to the Google Storage bucket e.g. `roles/storage.admin`
-    - Create the K8s *role* and *rolebinding* required to run Nextflow applying the manifest include in this directory: 
+ 4. Create the K8s *role* and *rolebinding* required to run Nextflow applying the manifest include in this directory: 
       ```
       kubectl apply -f gke.yml
       ``` 
