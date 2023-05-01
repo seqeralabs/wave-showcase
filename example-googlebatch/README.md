@@ -8,8 +8,11 @@ in the pipeline containers and access Google Storage as a work directory.
 ### Config file 
 
 ```
-google {
+process {
   executor = 'google-batch'
+}
+
+google {
   location  = 'europe-west2'
 }
 
