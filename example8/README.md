@@ -13,7 +13,7 @@ Kubernetes cluster to run the job submitted by the pipeline execution.
 The following manifest shows the bare minimum configuration.
 
 
-```
+```yaml
 ---
 apiVersion: v1
 kind: Namespace
@@ -55,7 +55,7 @@ subjects:
 
 The AWS IAM role should provide read-write permission to the S3 bucket used as the pipeline work directory. For example:
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -86,7 +86,7 @@ The AWS IAM role should provide read-write permission to the S3 bucket used as t
 
 Also, make sure that the role defines a trust relationship similar to this:
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -98,8 +98,8 @@ Also, make sure that the role defines a trust relationship similar to this:
             "Action": "sts:AssumeRoleWithWebIdentity",
             "Condition": {
                 "StringEquals": {
-                    "oidc.eks.eu-west-2.amazonaws.com/id/<YOUR CLUSTER ID>":aud": "sts.amazonaws.com",
-                    "oidc.eks.eu-west-2.amazonaws.com/id/<YOUR CLUSTER ID>":sub": "system:serviceaccount:wave-demo:wave-sa"
+                    "oidc.eks.eu-west-2.amazonaws.com/id/<YOUR CLUSTER ID>:aud": "sts.amazonaws.com",
+                    "oidc.eks.eu-west-2.amazonaws.com/id/<YOUR CLUSTER ID>:sub": "system:serviceaccount:wave-demo:wave-sa"
                 }
             }
         }
