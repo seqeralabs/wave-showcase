@@ -13,10 +13,6 @@ to provision the pipeline containers on-demand, by using the Conda recipes defin
 wave {
   enabled = true
   strategy = 'conda,container'
-  build.conda.commands = [
-    'USER root',
-    'RUN apt-get update -y && apt-get install -y procps'
-  ]
 }
  
 docker {
@@ -25,6 +21,7 @@ docker {
 
 fusion {
   enabled = true
+  exportStorageCredentials = true
 }
 ```
 

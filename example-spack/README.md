@@ -11,7 +11,6 @@ on-demand and provision for the pipeline execution.
 ```
 docker {
   enabled = true
-  runOptions = '-u $(id -u):$(id -g)'
 }
 
 wave {

@@ -18,11 +18,11 @@ wave {
 
 fusion {
   enabled = true
+  exportStorageCredentials = true
 }
 
 docker {
   enabled = true
-  envWhitelist = 'AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY'
 }
 ```
 
